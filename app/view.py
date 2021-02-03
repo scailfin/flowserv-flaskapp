@@ -3,17 +3,11 @@ routes to display a landing page (home page), start application workflow runs,
 and access run result files.
 """
 
-from io import BytesIO
 from flask import Blueprint, request, render_template, send_file, url_for
-from typing import IO
-
-import pandas as pd
 
 from flowserv.model.files.base import FlaskFile
 
 from app.workflow import flowapp
-
-import flowserv.util as util
 
 
 """Blueprint that groups the routes for the main application view."""
